@@ -1,16 +1,6 @@
 (function($) {
     "use strict";
 
-/**-- loader js --**/
-
-$("body").prepend('<div id="preloader"><div id="status"><img src="images/loading_1.gif" alt="#" /></div></div>');
-$(window).on('load', function() { // makes sure the whole site is loaded 
-    $('#status').fadeOut(); // will first fade out the loading animation 
-    $('#preloader').delay(250).fadeOut('slow'); // will fade out the white DIV that covers the website. 
-    $('body').delay(250).css({
-        'overflow': 'visible'
-    });
-})
 
 /**-- select js --**/
 
