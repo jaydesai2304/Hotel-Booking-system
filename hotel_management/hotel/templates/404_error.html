@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Pride Door</title>
+      <title>404 error</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -34,19 +34,6 @@
                <div class="col-lg-2">
                   <div class="full logo_section">
                      <a class="logo_main" href="index.html"><img src="{% static 'images/logo.png' %}" alt="#" /></a>
-                     <div class="float-right d-lg-none">
-                        <ul class="login_section">
-                           <li><a href="login.html">Login</a></li>
-                           <li><a href="sign_up.html">Sign up</a></li>
-                        </ul>
-                        <div class="search_container">
-                           <div class="search">
-                              <input type="text" placeholder="Search...">
-                           </div>
-                           <div class="search_btn search_open">
-                           </div>
-                        </div>
-                     </div>
                   </div>
                </div>
                <div class="col-lg-7">
@@ -70,7 +57,7 @@
                                </li>
                                
                                <li class="nav-item">
-                                  <a class="nav-link" href="{% url 'error' %}">Services</a>
+                                  <a class="nav-link" href="{% url 'service' %}">Services</a>
                                   
                                </li>
                                <li class="nav-item">
@@ -131,7 +118,7 @@
                      <h2 class="fw_700">Sorry the page not found</h2>
                   </div>
                   <div class="full center margin-top_3">
-                     <a class="main_btn" href="index.html">Back To Home</a>
+                     <a class="main_btn" href="{% url 'index' %}">Back To Home</a>
                   </div>
                </div>
                <!-- end price blog -->
@@ -147,10 +134,10 @@
                <div class="col-xl-4 col-lg-12">
                   <div class="full footer_widget">
                      <div class="full footer_logo">
-                        <a href="index.html"><img src="{% static 'images/logo_footer.png' %}" alt="#" /></a>
+                        <a href="{% url 'index' %}"><img src="{% static 'images/logo_footer.png' %}" alt="#" /></a>
                      </div>
                      <div class="full margin-top_3">
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum..</p>
+                        <p>Start your journey today and unlock a <br>world of luxury with just a click.</p>
                      </div>
                      <div class="full social_icon_footer margin-top_3">
                         <ul class="social_icon">
