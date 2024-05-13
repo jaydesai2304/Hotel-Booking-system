@@ -43,7 +43,7 @@
                      <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
+                                <li class="nav-item">
                                    <a class="nav-link" href="{% url 'index' %}">Home</a>                                
                                 </li>
                                 <li class="nav-item">
@@ -57,7 +57,7 @@
                                 <li class="nav-item">
                                    <a class="nav-link" href="{% url 'error' %}">Rooms</a>
                                 </li>
-                                <li class="nav-item dropdown">
+                                <li class="nav-item active">
                                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                                 </li>
                              </ul>
@@ -214,7 +214,7 @@
                         <a href="index.html"><img src="{% static 'images/logo_footer.png' %}" alt="#" /></a>
                      </div>
                      <div class="full margin-top_3">
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum..</p>
+                        <p>Start your journey today and unlock a <br>world of luxury with just a click.</p>
                      </div>
                      <div class="full social_icon_footer margin-top_3">
                         <ul class="social_icon">
@@ -237,6 +237,7 @@
                         <li><a href="services.html">Services</a></li>
                         <li><a href="rooms.html">Rooms</a></li>
                         <li><a href="faq.html">Faq</a></li>
+                        <li><a href="{% url 'tc' %}">Term & Condition</a></li>
                         <li><a href="pp.html">Privacy & Policy</a></li>
                         <li><a href="contact.html">Contact</a></li>
                      </ul>
