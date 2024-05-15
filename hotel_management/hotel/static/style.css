@@ -8,7 +8,7 @@
 
 
 @import url(animate.css);
-@import url(font-awesome.min.css);
+
 
 * {
      margin: 0;
@@ -1483,7 +1483,7 @@ ul.navbar-nav li.nav-item .dropdown-menu a.dropdown-item:focus {
      -o-transition: all .4s ease;
      -moz-transition: all .4s ease;
      transition: all .4s ease;
-     float: left;
+   
 }
 
 .quantity {
@@ -2342,8 +2342,6 @@ footer .footer_widget h4 {
 .tabbar_booking .nav-tabs {
      border-bottom: none;
 }
-
-.tabbar_booking .tab-content {}
 
 .tabbar_booking .tab-content h4 {
      font-size: 18px;
@@ -3338,10 +3336,6 @@ ul.pagination li a:focus {
 .portfolio-menu ul li.active {
      background: #71a4b9 !important;
      border-color: #71a4b9 !important;
-}
-
-.portfolio-item {
-     /*width:100%;*/
 }
 
 .portfolio-item .item {
