@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Sign_up
 
 def index(request):
     return render(request, 'index.html')
@@ -25,4 +26,13 @@ def login(request):
     return render(request, 'login.html')
 
 def signup(request):
+    if request.method == "POST":
+        name = request.POST['name']
+        Phone_Number = request.POST['Phone_Number']
+        email= request.POST['email']
+        password= request.POST['password']
+        Confirm_password= request.POST['Confirm_password']
+
+        Data = Sign_up(name=name, Phone_Number=Phone_Number, email=email, password=password, Confirm_password=Confirm_password)
+        Data.save()
     return render(request, 'sign_up.html')
