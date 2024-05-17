@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Sign_up
+from django.contrib import messages
+
 
 def index(request):
     return render(request, 'index.html')
@@ -28,11 +30,22 @@ def login(request):
 def signup(request):
     if request.method == "POST":
         name = request.POST['name']
+        username = request.POST['username']
         Phone_Number = request.POST['Phone_Number']
         email= request.POST['email']
         password= request.POST['password']
         Confirm_password= request.POST['Confirm_password']
 
-        Data = Sign_up(name=name, Phone_Number=Phone_Number, email=email, password=password, Confirm_password=Confirm_password)
+        if Sign_up.objects.filter(username = username).exists():
+            messages.error(request,'Username already taken')
+            return redirect(signup)
+        
+        if password != Confirm_password:
+            messages.error(request,'Password does not match')
+            return redirect(signup)
+
+
+        Data = Sign_up(name=name, username=username, Phone_Number=Phone_Number, email=email, password=password, 
+                       Confirm_password=Confirm_password)
         Data.save()
     return render(request, 'sign_up.html')
