@@ -49,3 +49,7 @@ def signup(request):
                        Confirm_password=Confirm_password)
         Data.save()
     return render(request, 'sign_up.html')
+
+def forgot(request):
+    return render(request, 'forgot.html')
+    
