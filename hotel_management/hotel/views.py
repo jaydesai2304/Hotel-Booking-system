@@ -52,4 +52,7 @@ def signup(request):
 
 def forgot(request):
     return render(request, 'forgot.html')
+
+def set_password(request):
+    return render(request, 'set_password.html')
     
