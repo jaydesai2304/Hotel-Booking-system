@@ -25,8 +25,19 @@ def room(request):
     return render(request, 'rooms.html')
 
 def login(request):
-    return render(request, 'login.html')
-
+    if request.method == "POST":
+        try:
+            user = Sign_up.objects.get(
+                username = request.POST['username'],
+                password = request.POST['password'],
+                )
+            request.session['username'] = user.username
+            return render(request, 'index.html')
+        except:
+            return render(request, 'login.html')
+    else:
+        return render(request, 'login.html')
+    
 def signup(request):
     if request.method == "POST":
         name = request.POST['name']
