@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Stay Hub | Forgot Password</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="{%static "images/favicon.png"%}" type="image/gif" />
+      <link href= {%static "bootstrap.min.css" %} rel="stylesheet">
+      <link href= {%static "daterangepicker.css" %} rel="stylesheet">
+      <link href= {%static "owl.carousel.min.css" %} rel="stylesheet">
+      <link href= {%static "nice-select.css" %} rel="stylesheet">
+      <link href= {%static "animate.css" %} rel="stylesheet">
+      <link href= {%static "style.css" %} rel="stylesheet">
+      <link href= {%static "responsive.css" %} rel="stylesheet">
+   
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+      
+   </head>
+   <body id="default_theme" class="inner_page forgot_page">
+      <!-- section -->
+      <section class="full bg_login_signup">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6">
+                  <div class="full">
+                     <div class="row">
+                        <div class="col-md-12" style="margin-top: 24%;">
+                           <div class="full margin-top_9">
+                              <h4 class="reveal fw_700 wow">Forgot Password</h4>
+                           </div>
+                           <div class="full margin-top_1">
+                           <form action="{% url 'set_password' %}" class="login_form login_signup">
+                                 <fieldset>
+                                    <div class="full">
+                                       <div class="full field margin-top_2">
+                                          <label>Enter Your Email Address</label>
+                                          <input type="email" name="email" required="" />
+                                       </div>
+                                       <div class="full field margin-top_5">
+                                          <button class="btn-submit margin-top_0" type="submit">Reset Password</button>
+                                       </div>
+                                    </div>
+                                 </fieldset>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="full">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end section -->
+      
+      <!-- js section -->
+      <script src="{% static "js/jquery.min.js" %}"></script>
+      <script src="{% static "js/bootstrap.min.js" %}"></script>
+      <script src="{% static "js/owl.carousel.js" %}"></script>
+      <script src="{% static "js/moment.min.js" %}"></script>
+      <script src="{% static "js/daterangepicker.js" %}"></script>
+      <script src="{% static "js/global.js" %}"></script>
+      <script src="{% static "js/jquery.nice-select.min.js" %}"></script>
+      <script src="{% static "js/wow.js" %}"></script>
+      <script src="{% static "js/custom.js" %}"></script>
+   </body>
+</html>

@@ -11,5 +11,9 @@ urlpatterns = [
     path('room/',views.room, name="room"),
     path('login/',views.login, name="login"),
     path('signup/',views.signup, name="signup"),
+    path('forgot/',views.forgot, name="forgot"),
+    path('set_password/',views.set_password, name="set_password"),   
+    path('single_room/',views.single_room, name="single_room"),   
+     
 
 ]   
