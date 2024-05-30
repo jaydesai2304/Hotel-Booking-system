@@ -43,12 +43,13 @@
                               <h4 class="reveal fw_700 wow">Login</h4>
                            </div>
                            <div class="full margin-top_1">
-                              <form action="index.html" class="login_form login_signup">
+                              <form action=""  method = "post" class="login_form login_signup">
+                                 {% csrf_token %}
                                  <fieldset>
                                     <div class="full">
                                        <div class="full field margin-top_2">
-                                          <label>Email or Phone</label>
-                                          <input type="email" name="email" required="" />
+                                          <label>Username</label>
+                                          <input type="username" name="username" required="" />
                                        </div>
                                        <div class="full field margin-top_2">
                                           <label>Password</label>
