@@ -69,3 +69,6 @@ def set_password(request):
     
 def single_room(request):
     return render(request, 'single_room.html')
+
+def booking(request):
+    return render(request, 'booking.html')
