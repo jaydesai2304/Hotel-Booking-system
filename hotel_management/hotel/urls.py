@@ -15,5 +15,6 @@ urlpatterns = [
     path('set_password/',views.set_password, name="set_password"),   
     path('single_room/',views.single_room, name="single_room"),  
     path('booking/',views.booking, name="booking"),   
+    path('payment/',views.payment, name="payment"),   
      
 ]   
