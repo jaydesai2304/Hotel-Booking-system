@@ -124,7 +124,7 @@
                            <div class="tab-content">
                               <div id="personal" class="tab-pane active">
                                  <h4><strong>Guest Details</strong> - Sed ut perspiciatis unde omnis iste natus..</h4>
-                                 <form action="payment.html" class="booking_form">
+                                 <form action="{% url 'payment' %}" class="booking_form">
                                     <fieldset>
                                        <div class="row">
                                           <div class="col-md-12">
@@ -195,7 +195,8 @@
                               </div>
                               <div id="business" class="tab-pane fade">
                                  <h4><strong>Business Class</strong> - Sed ut perspiciatis unde omnis iste natus..</h4>
-                                 <form method="post" action="payment.html" id="booking_form" class="booking_form">
+                                 <form method="post" action="{% url 'payment' %}" id="booking_form" class="booking_form">
+                                    {% csrf_token %}
                                     <fieldset>
                                        <div class="row">
                                           <div class="col-md-12">
