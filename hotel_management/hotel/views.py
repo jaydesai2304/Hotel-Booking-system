@@ -1,9 +1,14 @@
 from django.shortcuts import render, redirect
-from .models import Sign_up, Contact
+from .models import Sign_up, Contact, News_letter
 from django.contrib import messages
 
 
 def index(request):
+    if request.method == "POST":
+        newsletter_email = request.POST['newsletter_email']
+
+        data = News_letter(newsletter_email=newsletter_email)
+        data.save()
     return render(request, 'index.html')
 
 def error(request):
@@ -24,6 +29,7 @@ def contact(request):
 
         data = Contact(name=name, phone_no=phone_no, email=email, message=message)
         data.save()
+
     return render(request, 'contact.html')
 
 def tc(request):
@@ -86,3 +92,4 @@ def payment(request):
 
 def thanku(request):
     return render(request, 'thanku.html')
+

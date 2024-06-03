@@ -13,3 +13,7 @@ class Contact(models.Model):
     phone_no = models.IntegerField(default='')
     email = models.EmailField(max_length=100)
     message = models.CharField(max_length=100)
+
+class News_letter(models.Model):
+    newsletter_email =models.EmailField(max_length=100)
+    
