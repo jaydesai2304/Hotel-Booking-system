@@ -15,27 +15,53 @@ def error(request):
     return render(request, '404_error.html')
 
 def about(request):
+    if request.method == "POST":
+        newsletter_email = request.POST['newsletter_email']
+
+        data = News_letter(newsletter_email=newsletter_email)
+        data.save()
     return render(request, 'about.html')
 
 def service(request):
+    if request.method == "POST":
+        newsletter_email = request.POST['newsletter_email']
+
+        data = News_letter(newsletter_email=newsletter_email)
+        data.save()
     return render(request, 'services.html')
 
 def contact(request):
     if request.method == "POST":
-        name = request.POST['name']
-        phone_no = request.POST['phone_no']
-        email = request.POST['email']
-        message = request.POST['message']
+        try:
+            newsletter_email = request.POST['newsletter_email']
 
-        data = Contact(name=name, phone_no=phone_no, email=email, message=message)
-        data.save()
+            data = News_letter(newsletter_email=newsletter_email)
+            data.save()
+        except:
+            name = request.POST['name']
+            phone_no = request.POST['phone_no']
+            email = request.POST['email']
+            message = request.POST['message']
+
+            data = Contact(name=name, phone_no=phone_no, email=email, message=message)
+            data.save()
 
     return render(request, 'contact.html')
 
 def tc(request):
+    if request.method == "POST":
+        newsletter_email = request.POST['newsletter_email']
+
+        data = News_letter(newsletter_email=newsletter_email)
+        data.save()
     return render(request, 'tc.html')
 
 def room(request):
+    if request.method == "POST":
+        newsletter_email = request.POST['newsletter_email']
+
+        data = News_letter(newsletter_email=newsletter_email)
+        data.save()
     return render(request, 'rooms.html')
 
 def login(request):
@@ -82,12 +108,27 @@ def set_password(request):
     return render(request, 'set_password.html')
     
 def single_room(request):
+    if request.method == "POST":
+        newsletter_email = request.POST['newsletter_email']
+
+        data = News_letter(newsletter_email=newsletter_email)
+        data.save()
     return render(request, 'single_room.html')
 
 def booking(request):
+    if request.method == "POST":
+        newsletter_email = request.POST['newsletter_email']
+
+        data = News_letter(newsletter_email=newsletter_email)
+        data.save()
     return render(request, 'booking.html')
 
 def payment(request):
+    if request.method == "POST":
+        newsletter_email = request.POST['newsletter_email']
+
+        data = News_letter(newsletter_email=newsletter_email)
+        data.save()
     return render(request, 'payment.html')
 
 def thanku(request):
