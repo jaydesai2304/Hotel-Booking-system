@@ -208,13 +208,6 @@
                      </div>
                   </div>
                </div>
-               <div class="col-lg-6 col-xl-4 d-lg-block d-xl-none">
-                  <div class="full margin-top_5">
-                     <div class="full">
-                        <a class="full main_btn" href="booking.html">Booking start from $300</a>
-                     </div>
-                  </div>
-               </div>
                <div class="col-lg-6 col-xl-4">
                   <div class="full margin-top_5">
                      <div class="full room_contant">
@@ -325,7 +318,7 @@
                      <form action="" method = "post">
                         {% csrf_token %}
                         <fieldset>
-                           <input type="email" placeholder="Enter Your Email Address" name="newsletter_email" />
+                           <input type="email" placeholder="Enter Your Email Address" name="newsletter_email" required=""/>
                            <button>Subscribe</button>
                         </fieldset>
                      </form>
