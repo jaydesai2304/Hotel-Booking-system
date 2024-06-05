@@ -134,3 +134,6 @@ def payment(request):
 def thanku(request):
     return render(request, 'thanku.html')
 
+def more_hotels(request):
+    return render(request, 'more_hotels.html')
+

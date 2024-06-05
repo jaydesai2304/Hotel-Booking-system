@@ -16,6 +16,7 @@ urlpatterns = [
     path('single_room/',views.single_room, name="single_room"),  
     path('booking/',views.booking, name="booking"),   
     path('payment/',views.payment, name="payment"),   
-    path('thanku/',views.thanku, name="thanku"),   
+    path('thanku/',views.thanku, name="thanku"),  
+    path('more_hotels/',views.more_hotels, name="more_hotels"),   
      
 ]   
