@@ -2073,8 +2073,8 @@ footer .footer_widget h4 {
 /** room page slider **/
 
 .slide_arrow>a {
-     width: 70px;
-     height: 70px;
+     width: 40px;
+     height: 40px;
      background: #222;
      opacity: 1;
      top: calc(50% - 35px);
@@ -2086,11 +2086,11 @@ footer .footer_widget h4 {
 }
 
 .slide_arrow .carousel-control-prev {
-     left: -120px;
+     left: -80px;
 }
 
 .slide_arrow .carousel-control-next {
-     right: -120px;
+     right: -80px;
 }
 
 #slider1 h3 {
@@ -3512,5 +3512,5 @@ h3.heading {
    }
 
 .actp{
-     margin-top: 12px;
+     margin-top: 15px;
 }
