@@ -3499,16 +3499,19 @@ h3.heading {
      font-size: 15px;
      transition: 0.4s;
    }
-   
-   .active, .accordion:hover {
-     background-color: #ccc; 
-   }
+
+   .accordion-wrapper,.accordion.activ:hover {
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     background-color: white; 
+     margin-bottom: 8px;
+ }
    
    .panel {
      padding: 0 18px;
      display: none;
      background-color: white;
      overflow: hidden;
+
    }
 
 .actp{
